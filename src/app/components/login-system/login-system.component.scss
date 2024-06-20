@@ -1,0 +1,199 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0; 
+}
+.login-image {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border-radius: 10px 0px 0px 10px;
+  margin-right: 0; 
+  padding: 20px; 
+}
+
+.login-image img {
+  max-width: 250px;
+  height: auto;
+  padding: 10px;
+}
+
+.login-image p {
+  background-color: #f0f0f0;
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.login-card {
+  width: 370px; 
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+  border-radius: 20px !important;
+  height: auto; 
+  background-color: #fff; 
+  // outline: 1px solid red;
+  
+}
+
+.login-form, .signup-form {
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+
+.mat-tab-group {
+  margin-top: 10px;
+}
+
+.mat-tab-label {
+  font-size: 18px; 
+  font-weight: bold;
+}
+
+.mat-tab-body {
+  margin-top: 20px; 
+}
+
+.forgot-password {
+  text-align: right;
+  margin-bottom: 27px;
+}
+
+.forgot-password a {
+  color: #007bff; /* Adjusted color */
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.social-login {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  width: 100%;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.social-login p {
+  width: 100%;
+  margin: 10px 0; /* Adjusted margin */
+  text-align: center;
+}
+
+.social-login button {
+  width: 40%;
+  margin-bottom: 10px;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+button[type="submit"] {
+  margin-top: 20px; /* Added margin */
+}
+
+.mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination {
+  display: none!important;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+  background-color: #a03037;
+}
+
+.btn-color{
+  background-color: #a03037;
+  color: #fff;
+}
+
+/* Change the color of the label when the input is focused */
+.mat-focused .mat-form-field-label {
+  color: #a03037 !important;
+}
+
+/* Change the color of the underline when the input is focused */
+.mat-focused .mat-form-field-underline .mat-form-field-ripple {
+  background-color: #a03037 !important;
+}
+
+/* Change the color of the input text */
+.mat-input-element {
+  caret-color: #a03037 !important;
+  color: #a03037 !important;
+}
+
+/* Change the color of the outline when the input is focused */
+.mat-focused .mat-form-field-outline-thick {
+  border-color: #a03037 !important;
+}
+
+/* Change the color of the outline start and end */
+.mat-form-field-appearance-outline .mat-form-field-outline-start,
+.mat-form-field-appearance-outline .mat-form-field-outline-end {
+  border-color: #a03037 !important;
+}
+
+/* Change the color of the outline gap to transparent when focused */
+.mat-form-field-appearance-outline .mat-form-field-outline-gap {
+  border-color:  #a03037 !important; ;
+}
+
+/* Change the color of the thick outline */
+.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+  border-color: #a03037 !important;
+}
+
+/* Change the color of the error messages */
+.mat-error {
+  color: red !important;
+}
+
+/* Change the border color when invalid */
+.mat-form-field-invalid .mat-form-field-outline-thick,
+.mat-form-field-invalid .mat-form-field-outline-start,
+.mat-form-field-invalid .mat-form-field-outline-end,
+.mat-form-field-invalid .mat-form-field-outline-gap {
+  border-color: red !important;
+}
+
+/* Change the color of the input text, label, and underline ripple when invalid */
+.mat-form-field-invalid .mat-input-element,
+.mat-form-field-invalid .mat-form-field-label,
+.mat-form-field-invalid .mat-form-field-ripple {
+  color: red !important;
+}
+
+/* Change the color of the active tab label */
+.mat-tab-label.mat-tab-label-active {
+  color: #a03037 !important;
+}
+
+/* Change the color of the ripple effect */
+.mat-form-field-ripple {
+  background-color: #a03037 !important;
+}
+
+/* Fix overlapping placeholder with border */
+.mat-form-field-appearance-outline .mat-form-field-outline-gap {
+  transition: border-color 0.3s;
+}
+
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-gap {
+  border-top-color: transparent !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-flex {
+  padding: 0 0.75em;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-infix {
+  padding: 1em 0;
+}

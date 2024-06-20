@@ -1,0 +1,66 @@
+<div class="login-container">
+  <div class="login-image">
+    <img src="../../../assets/images/onlineShopingWomen.png" alt="Online Book Shopping" />
+    <p>Online Book Shopping</p>
+  </div>
+  <mat-card class="login-card">
+    <mat-tab-group class="mat-tab-group">
+      <mat-tab label="Login">
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="login-form">
+          <mat-form-field appearance="outline">
+            <mat-label>Email Id</mat-label>
+            <input matInput formControlName="emailId" type="email" placeholder="Email" required />
+            <mat-error *ngIf="loginForm.controls['emailId'].hasError('required')">Email is required</mat-error>
+            <mat-error *ngIf="loginForm.controls['emailId'].hasError('email')">Invalid email</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="loginPasswordVisible ? 'text' : 'password'" formControlName="password" placeholder="Password" required />
+            <button mat-icon-button matSuffix type="button" (click)="toggleLoginPasswordVisibility()">
+              <mat-icon>{{ loginPasswordVisible ? 'visibility_off' : 'visibility' }}</mat-icon>
+            </button>
+            <mat-error *ngIf="loginForm.controls['password'].hasError('required')">Password is required</mat-error>
+          </mat-form-field>
+          <div class="forgot-password">
+            <a href="#">Forgot Password?</a>
+          </div>
+          <button mat-raised-button class="btn-color" type="submit">Login</button>
+        </form>
+        <div class="social-login">
+          <p>OR</p>
+          <button mat-raised-button color="primary">Facebook</button>
+          <button mat-raised-button>Google</button>
+        </div>
+      </mat-tab>
+      <mat-tab label="Signup">
+        <form [formGroup]="signupForm" (ngSubmit)="onSignup()" class="signup-form">
+          <mat-form-field appearance="outline">
+            <mat-label>Full Name</mat-label>
+            <input matInput formControlName="fullName" type="text" placeholder="Full Name" required />
+            <mat-error *ngIf="signupForm.controls['fullName'].hasError('required')">Full Name is required</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Email Id</mat-label>
+            <input matInput formControlName="emailId" type="email" placeholder="Email" required />
+            <mat-error *ngIf="signupForm.controls['emailId'].hasError('required')">Email is required</mat-error>
+            <mat-error *ngIf="signupForm.controls['emailId'].hasError('email')">Invalid email</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="signupPasswordVisible ? 'text' : 'password'" formControlName="password" placeholder="Password" required />
+            <button mat-icon-button matSuffix type="button" (click)="toggleSignupPasswordVisibility()">
+              <mat-icon>{{ signupPasswordVisible ? 'visibility_off' : 'visibility' }}</mat-icon>
+            </button>
+            <mat-error *ngIf="signupForm.controls['password'].hasError('required')">Password is required</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Mobile Number</mat-label>
+            <input matInput formControlName="mobileNumber" type="tel" placeholder="Mobile Number" required />
+            <mat-error *ngIf="signupForm.controls['mobileNumber'].hasError('required')">Mobile Number is required</mat-error>
+          </mat-form-field>
+          <button mat-raised-button class="btn-color" type="submit">Signup</button>
+        </form>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card>
+</div>
