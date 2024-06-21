@@ -1,0 +1,11 @@
+<div class="book-main-cnt" *ngFor="let book of booksData">
+    <div class="book-photo-cnt" (click)="handleClick(book)">
+        <img [src]="book.imgSrc" alt="bookimage" class="book-photo">
+    </div>
+    <div class="book-details-cnt">
+        <strong>{{book.title}}</strong>
+        <span class="book-author-name">by {{book.author}}</span>
+        <div><span class="book-rating">{{book.rating}}*</span><span>({{book.ratingPeopleCount}})</span></div>
+        <span class="book-price">Rs. {{book.price}} <del>Rs. 2999</del></span>
+    </div>
+</div>

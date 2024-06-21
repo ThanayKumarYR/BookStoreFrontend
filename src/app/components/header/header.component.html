@@ -1,0 +1,39 @@
+<nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/dashboard/book">
+        <mat-icon svgIcon="book-icon"></mat-icon>
+        Bookstore
+      </a>
+      <div class="navbar-menu">
+        <div class="search-bar">
+          <input type="text" placeholder="Search books..." aria-label="Search books">
+          <button>
+            <mat-icon svgIcon="search-icon"></mat-icon>
+          </button>
+        </div>
+        <div class="navbar-item profile-menu">
+          <mat-icon svgIcon="profile-icon"></mat-icon>
+          <p>Profile</p>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="/dashboard/userProfile">
+              <mat-icon svgIcon="profile-icon"></mat-icon>
+              <span>User Profile</span>
+            </a>
+            <a class="dropdown-item" routerLink="/dashboard/orders">
+              <mat-icon svgIcon="star-icon"></mat-icon>
+              <span>My Orders</span>
+            </a>
+            <a class="dropdown-item" routerLink="/dashboard/wishlist">
+              <mat-icon svgIcon="heart-icon"></mat-icon>
+              <span>Wishlist</span>
+            </a>
+          </div>
+        </div>
+        <a class="navbar-item" routerLink="/dashboard/cart">
+          <mat-icon svgIcon="cart-icon"></mat-icon>
+          <p>Cart</p>
+        </a>
+      </div>
+    </div>
+  </nav>
+  

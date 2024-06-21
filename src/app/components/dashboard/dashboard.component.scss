@@ -1,0 +1,49 @@
+.navbar {
+    background-color: #d9534f;
+    padding: 1rem;
+  
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 1.5rem;
+        text-decoration: none;
+  
+        mat-icon {
+          margin-right: 0.5rem;
+          width: 24px;
+          height: 24px;
+        }
+      }
+  
+      .navbar-menu {
+        display: flex;
+        gap: 1rem;
+  
+        .navbar-item {
+          display: flex;
+          align-items: center;
+          color: white;
+          text-decoration: none;
+          font-size: 1rem;
+          transition: color 0.3s;
+  
+          mat-icon {
+            margin-right: 0.5rem;
+            width: 24px;
+            height: 24px;
+          }
+  
+          &:hover {
+            color: #f7f7f7;
+          }
+        }
+      }
+    }
+  }
+  

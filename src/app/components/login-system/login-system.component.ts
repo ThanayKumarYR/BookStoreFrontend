@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/userService/user.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class LoginSystemComponent implements OnInit {
   loginPasswordVisible: boolean = false;
   signupPasswordVisible: boolean = false;
 
-  constructor(private fb: FormBuilder, private userService: UserService) {
+  constructor(private fb: FormBuilder, private userService: UserService, private router:Router) {
     this.loginForm = this.fb.group({
       emailId: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]]
@@ -34,6 +35,8 @@ export class LoginSystemComponent implements OnInit {
     if (this.loginForm.valid) {
       this.userService.loginCall(this.loginForm.value).subscribe(response => {
         console.log('Login successful', response);
+        localStorage.setItem("token", response.data); 
+        this.router.navigate(["/dashboard/book"])
       }, error => {
         console.error('Login error', error);
       });

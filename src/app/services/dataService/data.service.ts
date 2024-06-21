@@ -10,6 +10,12 @@ export class DataService {
 
   constructor() { }
 
+  private allbooks = new BehaviorSubject<any[]>([]);
+  allBookState = this.allbooks.asObservable();
+  changeAllBookList(value: any[]) {
+    this.allbooks.next(value);
+  }
+
   toggleDrawerState(state: boolean) {
     this.drawerState.next(state)
   }

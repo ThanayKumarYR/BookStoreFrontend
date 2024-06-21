@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Input, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
@@ -11,11 +11,27 @@ import { LoginSystemComponent } from './components/login-system/login-system.com
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HeaderComponent } from './components/header/header.component';
+import { BookComponent } from './components/book/book.component';
+import { BookDetailsComponent } from './components/book-details/book-details.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { CartComponent } from './components/cart/cart.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { BookcontainerComponent } from './components/book-container/book-container.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginSystemComponent
+    LoginSystemComponent,
+    DashboardComponent,
+    HeaderComponent,
+    BookComponent,
+    BookcontainerComponent,
+    BookDetailsComponent,
+    WishlistComponent,
+    CartComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +43,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatTabsModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

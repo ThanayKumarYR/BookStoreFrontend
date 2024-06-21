@@ -1,0 +1,123 @@
+.navbar {
+    background-color: var(--primary);
+    padding: 0.5rem 3rem;
+  
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 1.5rem;
+        text-decoration: none;
+  
+        mat-icon {
+          margin-right: 0.5rem;
+          width: 24px;
+          height: 24px;
+        }
+      }
+  
+      .navbar-menu {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+  
+        .search-bar {
+          display: flex;
+          align-items: center;
+          background-color: white;
+          border-radius: 4px;
+          padding: 0.1rem;
+          margin-right: 100px;
+  
+          input {
+            width: 400px;
+            border: none;
+            outline: none;
+            padding: 0.5rem;
+            font-size: 1rem;
+            flex: 1;
+          }
+  
+          button {
+            background: none;
+            border: none;
+            cursor: pointer;
+  
+            mat-icon {
+              color: var(--primary);
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+  
+        .navbar-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          color: white;
+          text-decoration: none;
+          font-size: 1rem;
+          transition: color 0.3s;
+          position: relative;
+          cursor: pointer;
+  
+          mat-icon {
+            margin-right: 0.5rem;
+            width: 24px;
+            height: 24px;
+            background-color: var(--primary);
+          }
+  
+          &:hover {
+            color: #f7f7f7;
+          }
+  
+          &.profile-menu {
+            .dropdown-menu {
+              display: none;
+              position: absolute;
+              top: 2.5rem;
+              right: 0;
+              background-color: white;
+              border-radius: 4px;
+              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+              flex-direction: column;
+              width: max-content;
+  
+              .dropdown-item {
+                display: flex;
+                align-items: center;
+                padding: 0.5rem 1rem;
+                color: var(--primary);
+                text-decoration: none;
+                font-size: 1rem;
+  
+                mat-icon {
+                  margin-right: 0.5rem;
+                  width: 24px;
+                  height: 24px;
+                }
+  
+                &:hover {
+                  background-color: var(--primary);
+                  color:  #f7f7f7;
+                }
+              }
+            }
+  
+            &:hover .dropdown-menu {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+  
