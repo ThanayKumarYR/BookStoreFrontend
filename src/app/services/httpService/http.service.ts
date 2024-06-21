@@ -30,4 +30,18 @@ export class HttpService {
     console.log(localStorage.getItem('token'));
     return this.httpClient.get(`${this.baseUrl}/Book/getAll`, {headers: this.authHeader});
   }
+
+  addToCartApi(data:any){
+    return this.httpClient.post(`${this.baseUrl}/Cart`, data, {headers:this.authHeader});
+  }
+
+  getCartApi(){
+    return this.httpClient.get(`${this.baseUrl}/Cart`, {headers:this.authHeader});
+  }
+
+  unCartApi(data: number){
+    let params = new HttpParams();
+    params = params.append('cartId', data);
+    return this.httpClient.delete(`${this.baseUrl}/Cart`,{ headers: this.authHeader,params:params });
+  }
 }

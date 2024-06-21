@@ -1,1 +1,42 @@
-<p>cart works!</p>
+<div class="cart-container">
+    <mat-card class="cart-item" *ngFor="let book of cartList">
+      <div class="cart-item-content">
+        <img mat-card-image src="{{book.imgSrc}}" alt="Book Image">
+        <div class="cart-item-details">
+          <h2>{{book.title}}</h2>
+          <p>{{book.author}}</p>
+          <p>{{book.discountedPrice}}</p>
+          <div class="quantity-controls">
+            <button mat-icon-button (click)="decreaseQuantity()">
+              <mat-icon>remove</mat-icon>
+            </button>
+            <span>{{ quantity }}</span>
+            <button mat-icon-button (click)="increaseQuantity()">
+              <mat-icon>add</mat-icon>
+            </button>
+            <button mat-button color="warn" (click)="removeItem(book.cartId)">Remove</button>
+            <button mat-raised-button class="placeOrder" color="primary" (click)="placeOrder()">Place Order</button>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Address Details
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <!-- Address form goes here -->
+    </mat-expansion-panel>
+  
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Order Summary
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <!-- Order summary details go here -->
+    </mat-expansion-panel>
+  </div>
+  

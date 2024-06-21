@@ -24,6 +24,6 @@ export class BookcontainerComponent implements OnInit {
 
   handleClick(data: any) {
     console.log(data.bookId);
-    this.router.navigate([`/dashboard/bookdetails`, data.bookId]);
+    this.router.navigate([`/dashboard/book`, data.bookId]);
   }
 }

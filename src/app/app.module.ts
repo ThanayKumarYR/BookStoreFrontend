@@ -19,6 +19,7 @@ import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { CartComponent } from './components/cart/cart.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { BookcontainerComponent } from './components/book-container/book-container.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { BookcontainerComponent } from './components/book-container/book-contain
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
