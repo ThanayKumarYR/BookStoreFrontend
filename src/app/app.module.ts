@@ -20,6 +20,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { BookcontainerComponent } from './components/book-container/book-container.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { OrderComponent } from './components/order/order.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     BookDetailsComponent,
     WishlistComponent,
     CartComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

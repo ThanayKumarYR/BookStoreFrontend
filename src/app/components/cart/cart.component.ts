@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { CartService } from 'src/app/services/cartService/cart.service';
 
@@ -13,7 +14,7 @@ export class CartComponent implements OnInit {
   cartList: any[] = [];
   subscription: Subscription = new Subscription();
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService,private router:Router) {}
 
   increaseQuantity(): void {
     this.quantity++;
@@ -25,7 +26,9 @@ export class CartComponent implements OnInit {
     }
   }
 
-  placeOrder(){}
+  placeOrder(){
+    this.router.navigate(["/dashboard/order"])
+  }
 
   ngOnInit(): void {
     this.cartService.getCartApi().subscribe((res: any) => {

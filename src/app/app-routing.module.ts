@@ -7,6 +7,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { CartComponent } from './components/cart/cart.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
+import { OrderComponent } from './components/order/order.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,10 @@ const routes: Routes = [
       {
         path:"wishlist",
         component:WishlistComponent
+      },
+      {
+        path:"order",
+        component:OrderComponent
       }
     ]
   },
